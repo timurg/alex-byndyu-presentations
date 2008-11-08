@@ -10,7 +10,6 @@ namespace BusinessFacade
         private readonly IReportBuilder reportBuilder;
         private readonly IReportSender reportSender;
 
-        [Inject]
         public Reporter(IReportBuilder reportBuilder, IReportSender reportSender)
         {
             this.reportBuilder = reportBuilder;
