@@ -14,17 +14,17 @@ namespace BusinessFacade
             this.reportSender = reportSender;
         }
 
-        #region IReporter Members
-
         public void SendReports()
         {
             IList<Report> reports = reportBuilder.CreateReports();
+
+			if (reports.Count == 0)
+				throw new NoReportsException();
+
             foreach (Report report in reports)
             {
                 reportSender.Send(report);
             }
         }
-
-        #endregion
     }
 }
