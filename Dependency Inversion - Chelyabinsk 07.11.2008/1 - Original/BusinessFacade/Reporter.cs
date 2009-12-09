@@ -9,6 +9,9 @@ namespace BusinessFacade
             var reportBuilder = new ReportBuilder();
             IList<Report> reports = reportBuilder.CreateReports();
 
+			if (reports.Count == 0)
+				throw new NoReportsException();
+
             var reportSender = new EmailReportSender();
             foreach (Report report in reports)
             {
