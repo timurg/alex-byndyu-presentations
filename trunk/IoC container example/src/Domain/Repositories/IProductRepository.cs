@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using System.Collections.Generic;
+using Domain.Entities;
 
 namespace Domain.Repositories
 {
@@ -8,5 +9,6 @@ namespace Domain.Repositories
         void Save(Product entity);
         void Delete(Product entity);
         Product GetLastProduct();
+        IEnumerable<Product> GetProducts(int startNumber, int count);
     }
 }

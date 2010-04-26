@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Domain.Entities;
 using Domain.Repositories;
 using Services;
@@ -27,6 +28,12 @@ namespace BusinessLogic.Services
             productRepository.Save(product);
 
             return product;
+        }
+
+        public IEnumerable<Product> FindProducts(int pageNumber)
+        {
+            // в живом проекте все константы нужно брать из конфигурации
+            return productRepository.GetProducts(pageNumber*10, 30);
         }
 
         #endregion
