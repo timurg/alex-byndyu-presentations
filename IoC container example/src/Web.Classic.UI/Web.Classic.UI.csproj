@@ -45,8 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenters\ListViewDemoPresenter.cs" />
     <Compile Include="Presenters\ProductPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\IListViewDemoView.cs" />
     <Compile Include="Views\IProductView.cs" />
     <Compile Include="Views\IView.cs" />
   </ItemGroup>
