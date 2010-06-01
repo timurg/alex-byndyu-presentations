@@ -14,7 +14,7 @@ namespace DomainModel
             orders = new List<Order>();
         }
 
-        public Client(Account account)
+        public Client(Account account) : this()
         {
             if (account == null)
                 throw new ArgumentNullException("account");
